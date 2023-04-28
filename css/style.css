@@ -1,0 +1,486 @@
+/* ------------- Fonts ------------- */
+
+/* font-family: 'Etna', sans-serif; */
+@font-face {
+  font-family: 'Etna';
+  src: url("../fonts/etna/etna.woff2") format("woff2"),
+       url("../fonts/etna/etna.woff") format("woff"),
+       url("../fonts/etna/etna.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal; 
+}
+
+/* font-family: 'Honeybee', cursive; */
+@font-face {
+  font-family: 'Honeybee';
+  src: url("../fonts/honeybee/honeybee.woff2") format("woff2"),
+       url("../fonts/honeybee/honeybee.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal; 
+}
+
+/* font-family: 'CornerOne', sans-serif; */
+@font-face {
+  font-family: 'CornerOne';
+  src: url("../fonts/cornerOne/CornerOne-Regular.woff2") format("woff2"),
+       url("../fonts/cornerOne/CornerOne-Regular.woff") format("woff"),
+       url("../fonts/cornerOne/CornerOne-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'CornerOne';
+  src: url("../fonts/cornerOne/CornerOne-Bold-Regular.woff2") format("woff2"),
+       url("../fonts/cornerOne/CornerOne-Bold-Regular.woff") format("woff"),
+       url("../fonts/cornerOne/CornerOne-Bold-Regular.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal; 
+}
+
+/* font-family: 'NoirPro', sans-serif; */
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/noirPro/NoirPro-Light.woff2") format("woff2"),
+       url("../fonts/noirPro/NoirPro-Light.woff") format("woff"),
+       url("../fonts/noirPro/NoirPro-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/noirPro/NoirPro-Regular.woff2") format("woff2"),
+       url("../fonts/noirPro/NoirPro-Regular.woff") format("woff"),
+       url("../fonts/noirPro/NoirPro-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/noirPro/NoirPro-Bold.woff2") format("woff2"),
+       url("../fonts/noirPro/NoirPro-Bold.woff") format("woff"),
+       url("../fonts/noirPro/NoirPro-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'NoirPro';
+  src: url("../fonts/noirPro/NoirPro-Heavy.woff2") format("woff2"),
+       url("../fonts/noirPro/NoirPro-Heavy.woff") format("woff"),
+       url("../fonts/noirPro/NoirPro-Heavy.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal; 
+}
+
+
+/* ------------- Styles ------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #c9fbde;
+  font-family: 'CornerOne', sans-serif;
+  color: rgb(22, 21, 21);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c9fbde;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #89c5a2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6da082;
+}
+
+.pause {
+  height: 20vh;
+}
+
+/* ------------- Loading Section ------------- */
+.loading-screen {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(22, 21, 21);
+  color: #fff;
+  overflow: hidden;
+}
+.loading-section {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.loading-section .title {
+  margin: 0 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 70px;
+}
+.loading-section .bracket {
+  font-family: 'Etna', sans-serif;
+  font-size: 70px;
+  margin: 0 30px;
+  font-weight: 500;
+}
+#loader {
+  font-family: 'Etna', sans-serif;
+  font-size: 70px;
+}
+
+/* ------------- Welcome Screen ------------- */
+.welcome-screen {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.welcome-screen .welcome-text {
+  font-family: 'Etna', sans-serif;
+  font-size: 220px;
+  margin-left: 20px;
+}
+
+
+/* ------------- Main Screen ------------- */
+.main-screen {
+  position: relative;
+  border-top: 5px solid #043511;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #adf2ca;
+}
+.main-screen .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main-screen .garland {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.main-screen .clapperboard {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  z-index: 2;
+}
+.main-screen .clapperboard-anim-1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  height: 800px;
+  z-index: 1;
+}
+.main-screen .clapperboard-anim-2 {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  height: 800px;
+  z-index: 1;
+}
+.main-screen .cake {
+  position: absolute;
+  bottom: -100px;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.main-screen .card {
+  position: absolute;
+  bottom: 29px;
+  right: 5%;
+  transform: translateX(-50%) rotate(10deg);
+  z-index: 2;
+}
+.main-screen .main-text {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  display: block;
+  width: 100vw;
+  text-align: right;
+  z-index: 2;
+
+  font-family: 'Honeybee', cursive;
+  letter-spacing: 1px;
+  font-size: 150px;
+  color: #cc7c3f;
+  text-shadow: 1px 1px 2px rgb(108, 61, 10), 0 0 0.5em rgb(255, 247, 0), 0 0 0.1em rgb(255, 187, 0);
+}
+.main-screen .main-text span {
+  color: #b72b28;
+  text-shadow: 1px 1px 2px rgb(78, 4, 4), 0 0 0.5em rgb(255, 102, 0), 0 0 0.1em rgb(255, 187, 0);
+}
+
+/* ------------- Text Section ------------- */
+
+.text-section .main-text {
+  font-family: 'Etna', sans-serif;
+  text-align: center;
+  color: #a62523;
+  text-shadow: 3px 3px 3px rgb(90, 5, 5);
+  font-size: 200px;
+  margin-bottom: 50px;
+}
+
+.text-section .text-wr {
+  font-family: 'Etna', sans-serif;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 90px;
+  line-height: 1;
+  margin-bottom: 100px;
+}
+
+.text-section .text-img {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.text-section .text-img img {
+  width: 70vw;
+}
+
+.additional-text {
+  font-family: 'Etna', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  line-height: 1;
+  margin-bottom: 100px;
+}
+
+
+/* ------------- Text Section ------------- */
+.main-page {
+  overflow: hidden;
+  border: 1px solid #000;
+}
+.main-page .main-page__title {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3ce8a3;
+  font-family: 'Etna', sans-serif;
+  font-size: 120px;
+  border: 1px solid #000;
+}
+
+.main-page .main-page-content {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #000;
+  background-color: #c9fbde;
+}
+
+.main-page .main-page-content--l {
+  position: relative;
+  height: 100%;
+  max-width: 65%;
+}
+.main-page .main-page-content--l .main-page__subtitle {
+  font-family: 'Etna', sans-serif;
+  color: #a62523;
+  text-shadow: 3px 3px 3px rgb(90, 5, 5);
+  font-size: 110px;
+  margin: 20px 0 50px;
+}
+
+.main-page .main-page-content--l .main-page__text {
+  font-size: 38px;
+}
+.main-page .main-page-content--l .main-page__img {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+  width: 100px;
+}
+
+.main-page .main-page-content--r {
+  position: relative;
+  height: 100%;
+}
+.main-page .main-page-content--r .main-page__video {
+  height: 100vh;
+}
+.main-page .main-page-content--r .main-page__video--text {
+  position: absolute;
+  bottom: 58px;
+  z-index: 10;
+  right: 10px;
+  font-size: 30px;
+  color: #fff;
+  transform: rotate(-10deg);
+}
+
+
+
+/* ------------- Wishes Page ------------- */
+.wishes-page {
+  overflow: hidden;
+  border: 1px solid #000;
+}
+.wishes-page .wishes-page__title {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3cdae8;
+  font-family: 'Etna', sans-serif;
+  font-size: 120px;
+  border: 1px solid #000;
+}
+
+.wishes-page .wishes-page-content {
+  padding: 50px 20px;
+  border: 1px solid #000;
+  background-color: #c9fbde;
+}
+.wishes-page .wishes-page-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wishes-page .wishes-page-list__item {
+  display: block;
+  width: 70%;
+  font-size: 60px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  padding: 10px 10px 15px 10px;
+  background: #e8b43c;
+}
+.wishes-page .wishes-page-list__item:nth-child(odd) {
+  margin: 0 0 0 auto;
+  text-align: right;
+  background: #3ce8a3;
+}
+
+
+/* ------------- Gallary Page ------------- */
+.gallary-page {
+  overflow: hidden;
+  border: 1px solid #000;
+}
+.gallary-page .gallary-page__title {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3c92e8;
+  font-family: 'Etna', sans-serif;
+  font-size: 120px;
+  border: 1px solid #000;
+}
+
+.gallary-page .gallary-page-content {
+  border: 1px solid #000;
+  background-color: #c9fbde;
+}
+
+.gallary-page .gallary-page__disclaimer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Etna', sans-serif;
+  text-align: center;
+  font-size: 80px;
+  background-color: #c9fbde;
+}
+
+.gallary-page .gallary-page__items-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 50px;
+}
+
+.gallary-page .gallary-page__item {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #c9fbde;
+}
+
+.gallary-page .gallary-page__item-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallary-page .gallary-page__item-title {
+  max-width: 90vw;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'Etna', sans-serif;
+}
+
+
+/* ------------- Bonus Page ------------- */
+.bonus {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bonus-text {
+  text-align: center;
+  font-size: 200px;
+  font-weight: 700;
+  font-family: 'Etna', sans-serif;
+}
+
+.bonus-audio {
+  width: 500px;
+  height: 100px;
+}
